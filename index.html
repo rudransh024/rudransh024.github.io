@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rudransh Randeria | Portfolio</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f9f9f9;
+      scroll-behavior: smooth;
+    }
+    header {
+      background: linear-gradient(to right, #1a1a1a, #2c3e50);
+      color: white;
+      padding: 2em 1em;
+      text-align: center;
+      animation: fadeIn 1s ease-in;
+    }
+    nav {
+      background: #333;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    nav a {
+      color: white;
+      padding: 1em;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+    nav a:hover {
+      background: #575757;
+    }
+    .content {
+      max-width: 1000px;
+      margin: auto;
+      padding: 2em;
+    }
+    footer {
+      background: linear-gradient(to right, #2c3e50, #1a1a1a);
+      color: white;
+      text-align: center;
+      padding: 1em;
+      margin-top: 2em;
+    }
+    h2 {
+      color: #222;
+      border-bottom: 2px solid #eee;
+      padding-bottom: 0.3em;
+      margin-top: 1em;
+      animation: slideUp 0.6s ease-in-out;
+    }
+    .section {
+      display: none;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+    .section.active {
+      display: block;
+      opacity: 1;
+      transform: translateY(0);
+    }
+    ul li {
+      margin-bottom: 0.5em;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Rudransh Randeria</h1>
+    <p>Mechatronics Engineer | Automation | Robotics | Control Systems</p>
+  </header>
+
+  <nav>
+    <a href="#" onclick="showSection('home')">Home</a>
+    <a href="#" onclick="showSection('experience')">Experience</a>
+    <a href="#" onclick="showSection('education')">Education</a>
+    <a href="#" onclick="showSection('projects')">Projects</a>
+    <a href="#" onclick="showSection('skills')">Skills</a>
+    <a href="#" onclick="showSection('resume')">Resume</a>
+  </nav>
+
+  <div class="content">
+    <div id="home" class="section active">
+      <h2>About Me</h2>
+      <p>I’m a Mechatronics Engineering graduate from UNSW with hands-on experience in robotics, automation, and smart systems. I enjoy solving complex problems and building real-world projects using tools like SolidWorks, MATLAB, and C++. My goal is to work on projects that integrate hardware, software, and intelligent control systems to make technology more efficient and accessible.</p>
+    </div>
+
+    <div id="experience" class="section">
+      <h2>Experience</h2>
+      <p><strong>EV Systems Intern – Kalyani Powertrain</strong></p>
+      <ul>
+        <li>Developed a Simulink-based electric vehicle powertrain model for accurate system simulations.</li>
+        <li>Improved vehicle range from 120 km to over 200 km by optimizing system parameters.</li>
+        <li>Used CANalyzer to collect and analyze sensor/ECU data, reducing errors by 15%.</li>
+        <li>Collaborated with engineers to refine performance for real-world deployment.</li>
+      </ul>
+      <p><strong>Automation Intern – Chinco Textiles</strong></p>
+      <ul>
+        <li>Integrated PLC systems to increase operational efficiency by 30%.</li>
+        <li>Reduced machine downtime by 20% via preventative maintenance protocols.</li>
+        <li>Enhanced productivity and reduced fabric wastage by 12%.</li>
+        <li>Authored SOPs for automation processes in a regulated environment.</li>
+      </ul>
+    </div>
+
+    <div id="education" class="section">
+      <h2>Education</h2>
+      <p><strong>Bachelor of Mechatronics Engineering (Honours)</strong><br>University of New South Wales, 2020–2024</p>
+    </div>
+
+    <div id="projects" class="section">
+      <h2>Projects</h2>
+      <p><strong>Micromouse Robot:</strong></p>
+      <ul>
+        <li>Designed a maze-solving robot using Python and SolidWorks with 3D printed parts.</li>
+        <li>Implemented LIDAR and RRT algorithms to optimize navigation.</li>
+        <li>Achieved average solve time of 35 seconds in a 9x5 maze.</li>
+      </ul>
+      <p><strong>UR5e Connect4 Robot:</strong></p>
+      <ul>
+        <li>Automated gameplay using MATLAB, image processing, and robotic arm control.</li>
+        <li>Used computer vision to detect game state with 98% accuracy.</li>
+        <li>Integrated pick-and-place logic for real-time interaction with human players.</li>
+      </ul>
+      <p><strong>AI & IoT Fault Detection:</strong></p>
+      <ul>
+        <li>Created a predictive fault detection model using CNNs and Random Forest algorithms.</li>
+        <li>Integrated data pipelines from Treon IoT sensors into MySQL databases.</li>
+        <li>Developed real-time dashboard for condition monitoring and fault alerts.</li>
+      </ul>
+    </div>
+
+    <div id="skills" class="section">
+      <h2>Skills</h2>
+      <ul>
+        <li><strong>Programming:</strong> Python, C++, MATLAB</li>
+        <li><strong>CAD Tools:</strong> SolidWorks, AutoCAD</li>
+        <li><strong>Simulation Software:</strong> Simulink, CANalyzer</li>
+        <li><strong>MS Office:</strong> Word, Excel, PowerPoint</li>
+        <li><strong>Other Essential Skills:</strong> PLC Programming, MySQL, Image Processing, 3D Printing, AI/ML with IoT</li>
+      </ul>
+    </div>
+
+    <div id="resume" class="section">
+      <h2>Resume</h2>
+      <p><a href="Rudransh_Randeria_Resume.pdf" download>Download My Resume</a></p>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Rudransh Randeria</p>
+  </footer>
+
+  <script>
+    function showSection(id) {
+      document.querySelectorAll('.section').forEach(section => {
+        section.classList.remove('active');
+        section.style.display = 'none';
+      });
+      const activeSection = document.getElementById(id);
+      activeSection.style.display = 'block';
+      setTimeout(() => activeSection.classList.add('active'), 10);
+    }
+  </script>
+</body>
+</html>
